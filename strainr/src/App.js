@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TopNav from './components/topNav';
+import RecipeSearch from './components/recipeSearch';
+import RecipeList from './components/recipeList';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <TopNav />
+        <div className='row'>
+          <RecipeSearch className="col-6" />
+        </div>
+        <div className='row'>
+          <RecipeList  className="col-4"/>
+        </div>
       </div>
     );
   }
