@@ -1,7 +1,6 @@
 import React from 'react';
 import Recipe from './recipe';
 import {connect} from 'react-redux';
-import {Button} from 'reactstrap';
 
 const RecipeSearch = (props) => {
 
@@ -11,7 +10,6 @@ const RecipeSearch = (props) => {
   return (
     <div className="row" style={{textAlign: 'left', margin: '0 auto'}}>
       {listOfRecipes}
-      {/*<Button>MOAR+</Button>*/}
     </div>
   )
 }

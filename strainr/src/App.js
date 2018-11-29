@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
-import './App.css';
 import TopNav from './components/topNav';
-import RecipeSearch from './components/recipeSearch';
-import RecipeList from './components/recipeList';
+import Login from './components/login';
+import Dashboard from './components/dashboard';
+import {connect} from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <TopNav />
-        <div className='row'>
-          <RecipeSearch className="col-6" />
+      <Router>
+        <div>
+          <TopNav />
+          <Switch>
+            <Route exact path='/' component={ Login } />
+            <Route path='/dashboard' component={ Dashboard } />
+            <Route path='/dashboard/:id' component={ Dashboard } />
+          </Switch>
         </div>
-          <RecipeList />
-      </div>
+      </Router>
     );
   }
 }
 
-export default App;
+
+/*const mapStateToProps = state => {
+  return {
+    recipes: state.recipes GOING TO GET ID FROM STATE FOR USER?
+  }
+}*/
+
+export default connect(/*mapStateToProps*/)(App)
