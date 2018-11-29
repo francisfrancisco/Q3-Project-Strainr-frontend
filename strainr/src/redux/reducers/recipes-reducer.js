@@ -1,5 +1,4 @@
-import {
-  FETCH_RECIPES} from '../actions/recipes-actions';
+import { FETCH_RECIPES } from '../actions/recipes-actions';
 
 const initialState = []
 
