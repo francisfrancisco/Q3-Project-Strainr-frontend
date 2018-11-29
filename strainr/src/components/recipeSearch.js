@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-// import Recipe from './Recipe'
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { fetchRecipes } from '../redux/actions/recipes-actions';
 
@@ -85,11 +84,5 @@ class RecipeSearch extends Component {
   )
   }
 }
-
-// const mapStateToProps = state => {
-//   return {
-//     recipes: state.recipes
-//   }
-// }
 
 export default connect(null, {fetchRecipes})(RecipeSearch)
