@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { fetchRecipes } from '../redux/actions/recipes-actions';
 
+
 class RecipeSearch extends Component {
   state = {
     cookTime: '',
@@ -25,29 +26,31 @@ class RecipeSearch extends Component {
 
   return (
     <div style={{margin: '0 auto', width: '50%', textAlign: 'left'}}>
-    <Form onSubmit={this.handleSubmit}>
-      <FormGroup>
-        <Label for="exampleEmail">How many minutes?</Label>
-        <Input type="text" name="time" id="exampleEmail" onChange={this.handleChange} value={this.state.cookTime} placeholder="" />
+      <Form onSubmit={this.handleSubmit}>
+        <FormGroup>
+          <Label for="exampleEmail">How many minutes?</Label>
+          <Input type="text" name="time" id="exampleEmail" onChange={this.handleChange} value={this.state.cookTime} placeholder="" />
+        </FormGroup>
         <FormGroup tag="fieldset">
           <legend>What's Cookin?</legend>
-          <FormGroup check>
-            <Label check>
-              <Input
-              type="radio"
-              name="protein"
-              onChange={() => this.setState({protein: 'chicken'})}/>{' '}
-              Chicken
-            </Label>
-          </FormGroup>
-          <FormGroup check>
-            <Label check>
-              <Input
-              type="radio"
-              name="protein"
-              onChange={() => this.setState({protein: 'beef'})}/>{' '}
-              Beef
-            </Label>
+        </FormGroup>
+        <FormGroup check>
+          <Label check>
+            <Input
+            type="radio"
+            name="protein"
+            onChange={() => this.setState({protein: 'chicken'})}/>{' '}
+            Chicken
+          </Label>
+        </FormGroup>
+        <FormGroup check>
+          <Label check>
+            <Input
+            type="radio"
+            name="protein"
+            onChange={() => this.setState({protein: 'beef'})}/>{' '}
+            Beef
+          </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
@@ -76,10 +79,8 @@ class RecipeSearch extends Component {
               Veggies
             </Label>
           </FormGroup>
-        </FormGroup>
-      </FormGroup>
-      <Button type='submit'>asdf</Button>
-    </Form>
+        <Button style={{marginTop:'15px'}} type='submit'>asdf</Button>
+      </Form>
     </div>
   )
   }

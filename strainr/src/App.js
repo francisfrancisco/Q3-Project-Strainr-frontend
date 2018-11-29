@@ -12,9 +12,7 @@ class App extends Component {
         <div className='row'>
           <RecipeSearch className="col-6" />
         </div>
-        <div className='row'>
-          <RecipeList  className="col-4"/>
-        </div>
+          <RecipeList />
       </div>
     );
   }
