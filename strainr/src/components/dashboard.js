@@ -1,25 +1,21 @@
 import React from 'react';
 import RecipeSearch from './recipeSearch';
 import RecipeList from './recipeList';
-import {connect} from 'react-redux';
+import SavedRecipes from './savedRecipes';
 
 const Dashboard = props => {
 
   return (
-    <div className="App">
-      <div className='row'>
-        <RecipeSearch className="col-6" />
+    <div className='row' style={{padding:'2em'}}>
+      <div className='col-6'>
+        <RecipeSearch />
       </div>
-        <RecipeList />
+      <div className='col-6'>
+        <SavedRecipes />
+      </div>
+      <RecipeList />
     </div>
   );
 }
 
-/*const mapStateToProps = (state, props) => {
-  return {
-    GOING TO GET ID FROM STATE FOR USER?
-    user: state.users.filter(user => user.id == props.match.params.id)
-  }
-}*/
-
-export default connect(/*mapStateToProps*/)(Dashboard);
+export default Dashboard

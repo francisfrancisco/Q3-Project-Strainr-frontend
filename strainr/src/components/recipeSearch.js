@@ -24,14 +24,14 @@ class RecipeSearch extends Component {
   render(){
 
   return (
-    <div style={{margin: '0 auto', width: '50%', textAlign: 'left'}}>
+    <div>
       <Form onSubmit={this.handleSubmit}>
         <FormGroup>
-          <Label for="exampleEmail">How many minutes?</Label>
+          <h3>Maximum Cook Time</h3>
           <Input type="text" name="time" id="exampleEmail" onChange={this.handleChange} value={this.state.cookTime} placeholder="" />
         </FormGroup>
         <FormGroup tag="fieldset">
-          <legend>What's Cookin?</legend>
+          <h3>Protein</h3>
         </FormGroup>
         <FormGroup check>
           <Label check>
@@ -78,7 +78,7 @@ class RecipeSearch extends Component {
               Veggies
             </Label>
           </FormGroup>
-        <Button style={{marginTop:'15px'}} type='submit'>asdf</Button>
+        <Button style={{marginTop:'15px'}} type='submit'>Strain</Button>
       </Form>
     </div>
   )

@@ -1,12 +1,11 @@
 import axios from 'axios';
 export const CREATE_USER = 'CREATE_USER';
 export const LOGIN_USER = 'LOGIN_USER';
-export const LOGOUT_USER = 'LOGOUT_USER';
-export const INDEX_PAGE = 'INDEX_PAGE';
+/*export const LOGOUT_USER = 'LOGOUT_USER';*/
 
-export const createUser = XXXXXX => {
+export const createUser = () => {
   return dispatch => {
-    axios.post(`https://api.?????????/${XXXXXX}`)
+    axios.post(`https://localhost:8000/api/register`)
     .then(res => dispatch({
       type: CREATE_USER,
       payload: res.data
@@ -16,14 +15,14 @@ export const createUser = XXXXXX => {
 
 export const loginUser = id => {
   return dispatch => {
-  axios.get(`https://api/dashboard/${id}`)
+  axios.get(`https://api/user/${id}`)
   .then(res => dispatch({
     type: LOGIN_USER,
     payload: res.data
   }));
   }
 }
-export const logoutUser = XXXXXX => {
+/*export const logoutUser = XXXXXX => {
   return dispatch => {
     axios.get(`https://api.?????????/${XXXXXX}`)
     .then(res => dispatch({
@@ -31,14 +30,4 @@ export const logoutUser = XXXXXX => {
       payload: res.data
     }));
   }
-}
-
-export const indexPage = () => {
-  return dispatch => {
-  axios.get(`https://api/index`)
-  .then(res => dispatch({
-    type: INDEX_PAGE,
-    payload: res.data
-  }));
-  }
-}
+}*/

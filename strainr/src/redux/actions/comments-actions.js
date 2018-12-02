@@ -1,14 +1,14 @@
 import axios from 'axios';
-export const SHOW_COMMENT = 'SHOW_COMMENT';
+export const SHOW_COMMENTS = 'SHOW_COMMENTS';
 export const CREATE_COMMENT = 'CREATE_COMMENT';
 export const UPDATE_COMMENT = 'UPDATE_COMMENT';
 export const DELETE_COMMENT = 'DELETE_COMMENT';
 
-export const showComment = id => {
+export const showComments = () => {
   return dispatch => {
-    axios.get(`https://api/comments/${id}`)
+    axios.get(`http://localhost:8000/api/comments/3`)
     .then(res => dispatch({
-      type: SHOW_COMMENT,
+      type: SHOW_COMMENTS,
       payload: res.data
     }));
   }

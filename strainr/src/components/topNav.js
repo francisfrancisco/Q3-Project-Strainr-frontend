@@ -1,12 +1,7 @@
 import React from 'react';
 import {
-  // Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand
-  // Nav,
-  // NavItem,
-  // NavLink,
  } from 'reactstrap';
 
 export default class Example extends React.Component {
@@ -28,7 +23,6 @@ export default class Example extends React.Component {
       <div>
         <Navbar color="success" light expand="md">
           <NavbarBrand href="/">STRAINR</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
         </Navbar>
       </div>
     );
